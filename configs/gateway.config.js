@@ -14,8 +14,8 @@ module.exports = {
             "web": null
         },
         "endpoints": {
-            "host": "http://185.177.105.151:1998/",
-            "socket_host": "http://185.177.105.151:1998",
+            "host": "http://127.0.0.1:1998/",
+            "socket_host": "http://127.0.0.1:1998",
             "socket_path": "/experimental"
         }
     }
