@@ -130,11 +130,11 @@ Then copy the token from the access_token object.
 
 Open the link [http://127.0.0.1:1998/](http://127.0.0.1:1998/) and paste the token into the request parameter in the open dialog box and click the connect button to test the Socket.IO connection.
 
-![CONNECTION DIALOG](public\uploads\img1.png)
+![CONNECTION DIALOG](/public/uploads/img1.png)
 
 If you successfully connected to socket.io, you received a socket_id and signal event with your profile data.
 
-![SUCCESS CONNECTION](public\uploads\img2.png)
+![SUCCESS CONNECTION](/public/uploads/img2.png)
 
 End.
 
