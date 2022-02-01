@@ -1,0 +1,36 @@
+{
+   "compilerOptions": {
+      "lib": [
+         "ES5",
+         "ES6",
+         "ESNext.AsyncIterable"
+      ],
+      "resolveJsonModule": true,               // json imports
+      "esModuleInterop": true,                 // import common modules as ES6 Modules
+      "allowSyntheticDefaultImports": true,    // support typesystem compatibility
+      "downlevelIteration": true,
+      "target": "ES2015",
+      "module": "CommonJS",
+      "moduleResolution": "Node",
+      "outDir": "./build",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "baseUrl": ".",
+      "skipLibCheck": true,
+      "paths": {
+         // "@root/*": [
+         //    "src/*"
+         // ],
+         // "@app": [
+         //    "src/index.ts"
+         // ]
+      }
+   },
+   "exclude": [
+      "configs",
+      "node_modules",
+      "public",
+      "src_bk"
+   ]
+}
