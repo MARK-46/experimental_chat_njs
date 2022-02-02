@@ -45,8 +45,6 @@ export class AuthController {
     @Post('/register')
     async register(@Req() req: IRequest, @Res() res: Response,
                    @Body({required: true}) data: RegisterRequestModel): Promise<Response<IResponse>> {
-        console.log('reg', data)
-
         const validatorResult = await ValidatorUtility.check(data, {
             "username": "required|regex:^[A-Za-z0-9_-]{3,15}$|unique:chat,ex__users,user_username",
             "password": "required|string|minLength:6|maxLength:36|same:confirm_password",
