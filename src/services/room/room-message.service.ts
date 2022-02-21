@@ -48,7 +48,7 @@ export class RoomMessageService implements IService {
             row.message_type,
             row.message_created_at,
             row.message_updated_at,
-            await getCustomService(UserService).findByID(row.message_user_id),
+            await getCustomService(UserService).findByID(row.message_user_id, true),
             expandFiles ? await getCustomService(RoomFileService).findAll(row.message_room_id, row.message_id) : null,
             expandReply ? await this.findOne(row.message_reply_id, expandReplyFiles, false) : null,
             expandRecipients ? await getCustomService(RoomRecipientService).recipients(row.message_id) : null

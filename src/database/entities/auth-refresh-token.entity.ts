@@ -16,6 +16,9 @@ export class AuthRefreshTokenEntity {
     @Column({type: 'text', nullable: false})
     public refresh_token: string;
 
+    @Column({type: 'integer', nullable: true, default: 0})
+    public revoked: number;
+
     @Column({type: 'datetime', nullable: false})
     public expires_at: Date;
 

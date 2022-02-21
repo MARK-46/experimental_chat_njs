@@ -9,7 +9,7 @@ export default class RefreshTokenRepository extends Repository<AuthRefreshTokenE
         const created_at = moment();
         const expires_at = moment().add(days, 'days');
         const token = crypto.createHash('sha512')
-            .update(`ID:${user_id}-S:${created_at}-E:${expires_at}`).digest('hex').toUpperCase();
+            .update(`REFRESH-ID:${user_id}-S:${created_at}-E:${expires_at}`).digest('hex').toUpperCase();
         const result = await this.insert({
             user_id: user_id,
             refresh_token: token,
@@ -21,6 +21,7 @@ export default class RefreshTokenRepository extends Repository<AuthRefreshTokenE
             return {
                 refresh_id: result.identifiers[0]['refresh_id'],
                 refresh_token: token,
+                revoked: 0,
                 created_at: created_at.toDate(),
                 expires_at: expires_at.toDate(),
                 user_id: user_id,
